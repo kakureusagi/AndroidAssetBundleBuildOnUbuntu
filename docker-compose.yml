@@ -1,0 +1,9 @@
+version: '3'
+services:
+   unity:
+     image: unityci/editor:ubuntu-2021.2.6f1-android-0.15.0
+     container_name: ubuntu-unity
+     tty: true
+     volumes:
+     - AssetBundles:/var/AndroidAssetBundleBuildOnUbuntu/AssetBundles
+     - Work:/var/AndroidAssetBundleBuildOnUbuntu/Work
