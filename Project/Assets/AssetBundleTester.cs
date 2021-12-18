@@ -7,6 +7,8 @@ namespace App
 	{
 		public void Start()
 		{
+			AssetBundle.LoadFromFile("../AssetBundles/Dog");
+			AssetBundle.LoadFromFile("../AssetBundles/CubePrefab");
 			AssetBundle.LoadFromFile("../AssetBundles/SampleScene");
 
 			SceneManager.LoadScene("SampleScene", LoadSceneMode.Additive);
