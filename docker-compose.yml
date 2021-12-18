@@ -5,5 +5,5 @@ services:
      container_name: ubuntu-unity
      tty: true
      volumes:
-     - AssetBundles:/var/AndroidAssetBundleBuildOnUbuntu/AssetBundles
-     - Work:/var/AndroidAssetBundleBuildOnUbuntu/Work
+     - ./AssetBundles:/var/AssetBundles
+     - ./Work:/var/Work
