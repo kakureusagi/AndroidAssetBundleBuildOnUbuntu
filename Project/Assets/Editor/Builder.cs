@@ -24,13 +24,18 @@ namespace App
 				},
 				new AssetBundleBuild
 				{
-					assetBundleName = "Animation.anim",
+					assetBundleName = "Animation",
 					assetNames = new[] { "Assets/Animation.anim" },
 				},
 				new AssetBundleBuild
 				{
 					assetBundleName = "SampleScene",
 					assetNames = new[] { "Assets/SampleScene.unity" },
+				},
+				new AssetBundleBuild
+				{
+					assetBundleName = "Dog",
+					assetNames = new[] { "Assets/Dog.png" },
 				},
 			});
 
