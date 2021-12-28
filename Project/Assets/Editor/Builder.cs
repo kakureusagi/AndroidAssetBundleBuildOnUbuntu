@@ -52,7 +52,7 @@ namespace App
 		{
 			var options = new BuildPlayerOptions
 			{
-				scenes = new[] { "Assets/FirstScene.unity" },
+				scenes = new[] { "Assets/Scenes/FirstScene.unity" },
 				locationPathName = "App.apk",
 				target = BuildTarget.Android,
 				targetGroup = BuildTargetGroup.Android,
