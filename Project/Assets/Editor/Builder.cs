@@ -1,13 +1,14 @@
 using System.IO;
 using UnityEditor;
 using UnityEditor.Build.Pipeline;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 namespace App
 {
 	public class Builder
 	{
-		static readonly string OutputDirectory = "../AssetBundles";
+		static readonly string OutputDirectory = "Assets/AssetBundles";
 		
 		[MenuItem("App/Build AssetBundle")]
 		public static void Build()
@@ -19,22 +20,22 @@ namespace App
 			{
 				new AssetBundleBuild
 				{
-					assetBundleName = "CubePrefab",
+					assetBundleName = "CubePrefab.bytes",
 					assetNames = new[] { "Assets/CubePrefab.prefab" },
 				},
 				new AssetBundleBuild
 				{
-					assetBundleName = "Animation",
+					assetBundleName = "Animation.bytes",
 					assetNames = new[] { "Assets/Animation.anim" },
 				},
 				new AssetBundleBuild
 				{
-					assetBundleName = "SampleScene",
+					assetBundleName = "SampleScene.bytes",
 					assetNames = new[] { "Assets/SampleScene.unity" },
 				},
 				new AssetBundleBuild
 				{
-					assetBundleName = "Dog",
+					assetBundleName = "Dog.bytes",
 					assetNames = new[] { "Assets/Dog.png" },
 				},
 			});
