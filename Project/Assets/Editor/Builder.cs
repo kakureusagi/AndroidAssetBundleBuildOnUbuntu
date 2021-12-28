@@ -1,7 +1,6 @@
 using System.IO;
 using UnityEditor;
 using UnityEditor.Build.Pipeline;
-using UnityEditor.SceneManagement;
 using UnityEngine;
 
 namespace App
@@ -11,7 +10,7 @@ namespace App
 		static readonly string OutputDirectory = "Assets/AssetBundles";
 		
 		[MenuItem("App/Build AssetBundle")]
-		public static void Build()
+		public static void BuildAssetBundle()
 		{
 			Directory.CreateDirectory(OutputDirectory);
 			var parameters = new BundleBuildParameters(BuildTarget.Android, BuildTargetGroup.Android, OutputDirectory);
@@ -40,13 +39,28 @@ namespace App
 				},
 			});
 
-
 			ContentPipeline.BuildAssetBundles(parameters, content, out var results);
 			foreach (var info in results.BundleInfos)
 			{
 				Debug.Log(info.Key);
 				Debug.Log(info.Value.FileName);
 			}
+		}
+
+		[MenuItem("App/Build App")]
+		public static void BuildApp()
+		{
+			var options = new BuildPlayerOptions
+			{
+				scenes = new[] { "Assets/FirstScene.unity" },
+				locationPathName = "App.apk",
+				target = BuildTarget.Android,
+				targetGroup = BuildTargetGroup.Android,
+				options = BuildOptions.None,
+			};
+
+			var report = BuildPipeline.BuildPlayer(options);
+			Debug.Log(report.summary.result);
 		}
 	}
 }
