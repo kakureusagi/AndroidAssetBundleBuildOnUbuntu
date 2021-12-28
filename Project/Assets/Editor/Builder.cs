@@ -20,22 +20,22 @@ namespace App
 				new AssetBundleBuild
 				{
 					assetBundleName = "CubePrefab.bytes",
-					assetNames = new[] { "Assets/CubePrefab.prefab" },
+					assetNames = new[] { "Assets/Data/CubePrefab.prefab" },
 				},
 				new AssetBundleBuild
 				{
 					assetBundleName = "Animation.bytes",
-					assetNames = new[] { "Assets/Animation.anim" },
+					assetNames = new[] { "Assets/Data/Animation.anim" },
 				},
 				new AssetBundleBuild
 				{
 					assetBundleName = "SampleScene.bytes",
-					assetNames = new[] { "Assets/SampleScene.unity" },
+					assetNames = new[] { "Assets/Data/SampleScene.unity" },
 				},
 				new AssetBundleBuild
 				{
 					assetBundleName = "Dog.bytes",
-					assetNames = new[] { "Assets/Dog.png" },
+					assetNames = new[] { "Assets/Data/Dog.png" },
 				},
 			});
 
